@@ -1,0 +1,6 @@
+{
+  "name": "Zohelo - Polish Public Data & Analytics Lakehouse",
+  "description": "Independent data powerhouse & analytics portal for Polish public data (GUS, Atlas Regionów) featuring live KPIs, interactive regional maps, research chronicles, data vault, and B2B consulting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-teal: #3B8B94;
+    --primary-teal-dark: #2C6E76;
+    --primary-teal-light: #EBF5F6;
+    --secondary-azure: #3A6FA4;
+    --secondary-azure-dark: #2B5480;
+    --secondary-azure-light: #EBF2F9;
+    --neutral-charcoal: #24292E;
+    --neutral-surface: #FFFFFF;
+    --neutral-bg: #F4F7F9;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #F3F6F8;
+    color: #24292E;
+  }
+
+  h1, h2, .font-serif-heading {
+    font-family: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom crisp card shadow matching mockup */
+.zohelo-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.zohelo-card:hover {
+  box-shadow: 0 10px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+  border-color: rgba(59, 139, 148, 0.25);
+}
+
+.zohelo-card-no-hover {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
