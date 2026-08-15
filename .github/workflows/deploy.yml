@@ -1,0 +1,35 @@
+name: Deploy Zohelo to GCP VM
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows the founder to trigger deployment manually via the GitHub UI with 1 click!
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install Dependencies & Build
+        run: |
+          bun install
+          bun run build
+
+      - name: Deploy to GCP VM via Rsync
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDIvz --delete" # Strictly use lowercase -v for verbose, NOT uppercase -V
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: "/var/www/html"
+          EXCLUDE: "/node_modules/"
