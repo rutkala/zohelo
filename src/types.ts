@@ -1,3 +1,24 @@
+export interface FinnhubQuoteResponse {
+  c: number;  // Current price
+  d: number | null;  // Change
+  dp: number | null; // Percent change
+  h: number;  // High price of the day
+  l: number;  // Low price of the day
+  o: number;  // Open price of the day
+  pc: number; // Previous close price
+  t?: number; // Timestamp
+}
+
+export interface StockAssetInfo {
+  symbol: string;
+  name: string;
+  company: string;
+  exchange: string;
+  currency: string;
+  category: string;
+  fallbackQuote: FinnhubQuoteResponse;
+}
+
 export interface MarketIndicator {
   id: string;
   symbol: string;

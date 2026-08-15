@@ -1,4 +1,97 @@
-import { MarketIndicator } from '../types';
+import { MarketIndicator, StockAssetInfo } from '../types';
+
+export const stockAssets: StockAssetInfo[] = [
+  {
+    symbol: 'AAPL',
+    name: 'Apple Inc.',
+    company: 'Apple Inc.',
+    exchange: 'NASDAQ',
+    currency: 'USD',
+    category: 'Tech & Hardware',
+    fallbackQuote: {
+      c: 228.45,
+      d: 2.18,
+      dp: 0.96,
+      h: 230.12,
+      l: 226.70,
+      o: 227.10,
+      pc: 226.27,
+      t: Math.floor(Date.now() / 1000)
+    }
+  },
+  {
+    symbol: 'MSFT',
+    name: 'Microsoft Corp.',
+    company: 'Microsoft Corporation',
+    exchange: 'NASDAQ',
+    currency: 'USD',
+    category: 'Cloud & AI Enterprise',
+    fallbackQuote: {
+      c: 448.20,
+      d: 4.35,
+      dp: 0.98,
+      h: 450.80,
+      l: 444.15,
+      o: 445.00,
+      pc: 443.85,
+      t: Math.floor(Date.now() / 1000)
+    }
+  },
+  {
+    symbol: 'TSLA',
+    name: 'Tesla, Inc.',
+    company: 'Tesla, Inc.',
+    exchange: 'NASDAQ',
+    currency: 'USD',
+    category: 'EV & Energy Tech',
+    fallbackQuote: {
+      c: 214.30,
+      d: -3.85,
+      dp: -1.76,
+      h: 221.50,
+      l: 211.80,
+      o: 220.00,
+      pc: 218.15,
+      t: Math.floor(Date.now() / 1000)
+    }
+  },
+  {
+    symbol: 'NVDA',
+    name: 'NVIDIA Corp.',
+    company: 'NVIDIA Corporation',
+    exchange: 'NASDAQ',
+    currency: 'USD',
+    category: 'Semiconductors & AI',
+    fallbackQuote: {
+      c: 128.90,
+      d: 3.70,
+      dp: 2.95,
+      h: 130.45,
+      l: 125.60,
+      o: 126.20,
+      pc: 125.20,
+      t: Math.floor(Date.now() / 1000)
+    }
+  },
+  {
+    symbol: 'AMZN',
+    name: 'Amazon.com Inc.',
+    company: 'Amazon.com, Inc.',
+    exchange: 'NASDAQ',
+    currency: 'USD',
+    category: 'E-Commerce & AWS',
+    fallbackQuote: {
+      c: 186.75,
+      d: 1.45,
+      dp: 0.78,
+      h: 188.10,
+      l: 185.20,
+      o: 185.80,
+      pc: 185.30,
+      t: Math.floor(Date.now() / 1000)
+    }
+  }
+];
 
 export const pulseIndicators: MarketIndicator[] = [
   {
